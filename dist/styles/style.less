@@ -1,0 +1,1433 @@
+@font-face {
+  font-family: Museo Sans Cyrl100;
+  src: url('/fonts/Museo Sans Cyrl 100.ttf');
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl300;
+  src: url('/fonts/Museo Sans Cyrl 300.ttf');
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl500;
+  src: url('/fonts/Museo Sans Cyrl 500.ttf');
+}
+
+@font-face {
+  font-family: Museo Sans Cyrl700;
+  src: url('/fonts/Museo Sans Cyrl 700.ttf');
+}
+
+@font-face {
+  font-family: Meumann;
+  src: url('/fonts/Neumann.otf');
+}
+
+@font-face {
+  font-family: Slick;
+  src: url('/fonts/Slick.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #25252d;
+  overflow: auto;
+}
+
+.imageF {
+  background: url('../../images/ScreenOne.png') no-repeat center center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.screenone {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.header {
+  border-bottom: 1px solid #363d51;
+  margin-bottom: 160px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .phonecall {
+    display: flex;
+    align-items: center;
+
+    .call {
+      font-size: 16px;
+      font-family: Museo Sans Cyrl700, sans-serif;
+      color: rgb(236, 198, 107);
+      border-bottom: 1px solid rgb(236, 198, 107);
+      order: 2;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .call:hover {
+      color: rgb(238, 183, 49);
+      border-bottom: 1px solid rgb(238, 183, 49);
+      transition: 500ms
+    }
+
+    .effectcall {
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .logo {
+    order: 1;
+    padding-left: 513px;
+    padding-right: 373px;
+  }
+
+  .phone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    order: 3;
+
+    .phonenumber {
+      font-size: 18px;
+      font-family: Museo Sans Cyrl700, sans-serif;
+      color: rgb(255, 255, 255);
+      line-height: 0.833;
+    }
+  }
+}
+
+.menu {
+  cursor: pointer;
+
+  img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+}
+
+.menuOpen {
+  width: 612px;
+  height: 970px;
+  background-color: #25252d;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: none;
+
+  .menuOpen-Nav {
+    padding-left: 358px;
+
+    .closemenu {
+      padding-top: 35px;
+      padding-bottom: 51px;
+      cursor: pointer;
+    }
+
+    span {
+      font-size: 40px;
+      font-family: Neumann, sans-serif;
+      color: rgb(255, 255, 255);
+      padding-top: 30px;
+    }
+
+    .menuOpen-Links {
+      display: flex;
+      flex-direction: column;
+
+      .menu-link {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl300, sans-serif;
+        color: rgb(255, 255, 255);
+      }
+
+      .menu-link:hover {
+        color: #ecc66b;
+        cursor: pointer;
+        padding-left: 20px;
+      }
+
+      a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        padding-top: 30px;
+      }
+
+      a:after {
+        content: '';
+        position: absolute;
+        bottom: 9px;
+        left: 6px;
+        width: 5px;
+        height: 5px;
+        margin-left: -5px;
+        background: #ecc66b;
+        border-radius: 50%;
+        opacity: 0;
+      }
+
+      a:hover:after {
+        opacity: 1;
+      }
+
+    }
+
+    .menuOpen-Social {
+      padding-top: 71px;
+      display: flex;
+      align-items: center;
+
+      img {
+        padding-right: 30px;
+      }
+
+      img:hover {
+        opacity: 0.5;
+        transition: 0.5s;
+      }
+
+    }
+  }
+}
+
+.main {
+  padding-bottom: 100px;
+
+  .container {
+    .main-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 553px;
+      margin: 0 auto;
+
+      h1 {
+        font-size: 50px;
+        font-family: Neumann, sans-serif;
+        color: rgb(236, 198, 107);
+        line-height: 1.2;
+        text-align: center;
+        padding-bottom: 15px;
+      }
+
+      span {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl700, sans-serif;
+        color: rgb(255, 255, 255);
+        line-height: 3.333;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+
+      .main-btn {
+        background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+        background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+        background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+        border: none;
+        width: 300px;
+        height: 60px;
+        border-radius: 30px;
+        font-size: 18px;
+        font-family: Museo Sans Cyrl700, sans-serif;
+        color: rgb(37, 37, 45);
+        line-height: 3.333;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    .main-btn:hover {
+      box-shadow: 0 5px 10px 2px rgb(37, 37, 45);;
+    }
+
+    .main-arrow {
+      display: flex;
+      flex-direction: column-reverse;
+
+      img {
+        width: 15px;
+        height: 30px;
+        padding-top: 25px;
+        padding-left: 4px;
+      }
+
+      span {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(186, 186, 186);
+        writing-mode: tb-rl;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .main-social {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 305px;
+    right: calc(50% - 600px);
+  }
+
+  img {
+    padding-bottom: 30px;
+  }
+
+  img:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+}
+
+.projects {
+  .container {
+    .project-title {
+      text-align: center;
+      padding-bottom: 70px;
+
+      span {
+        font-size: 40px;
+        font-family: Neumann, sans-serif;
+        color: rgb(236, 198, 107);
+        margin: 0 auto;
+      }
+    }
+
+    #project-2 {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-top: 120px;
+
+      #project-2-images {
+        padding-left: 126px;
+        padding-right: 0;
+      }
+
+      #project-1-info {
+        padding-top: 120px;
+      }
+    }
+
+    #project-2-dop {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-top: 120px;
+    }
+
+    #project-2-images-dop {
+      padding-left: 126px;
+      padding-right: 0;
+    }
+
+    .project-1 {
+      display: flex;
+
+      .project-1-images {
+        padding-right: 126px;
+
+        .project-1-images-small {
+          padding-top: 20px;
+        }
+      }
+
+      .project-1-title-adaptive {
+        display: none;
+      }
+
+      .project-1-info {
+        max-width: 486px;
+
+        .project-1-title {
+          font-size: 30px;
+          font-family: Museo Sans Cyrl500, sans-serif;
+          color: rgb(255, 255, 255);
+        }
+
+        .project-1-description {
+          font-size: 18px;
+          font-family: Museo Sans Cyrl300, sans-serif;
+          color: rgb(255, 255, 255);
+          text-align: left;
+        }
+
+        .project-1-numbers {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 53px;
+
+          .project-1-number-circle {
+            border: 1px solid rgb(236, 198, 107);
+            height: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 110px;
+            text-align: center;
+            border-radius: 100%;
+            vertical-align: top;
+
+            .project-1-number-text {
+              font-size: 20px;
+              font-family: Museo Sans Cyrl500, sans-serif;
+              color: rgb(236, 198, 107);
+              max-width: 80px;
+            }
+          }
+        }
+
+        .project-1-info-buttons {
+          padding-top: 50px;
+
+          .project-1-info-btn {
+            background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+            background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+            background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+            border: none;
+            width: 365px;
+            height: 60px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-family: Museo Sans Cyrl700, sans-serif;
+            color: rgb(37, 37, 45);
+            margin-bottom: 20px;
+            cursor: pointer;
+          }
+
+          .project-1-info-btn-2 {
+            border: 1px solid rgb(255, 255, 255);
+            background-color: transparent;
+            width: 365px;
+            height: 60px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-family: Museo Sans Cyrl700, sans-serif;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .next-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 63px;
+
+      img {
+        width: 16px;
+        height: 9px;
+        order: 1;
+        padding-top: 4px;
+        cursor: pointer;
+      }
+
+      .next-text {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(137, 137, 138);
+        padding-right: 10px;
+        cursor: pointer;
+      }
+    }
+
+    #project-1-dop {
+      padding-top: 120px;
+    }
+
+    #project-3-dop {
+      padding-top: 120px;
+    }
+
+    .project-dops {
+      display: none;
+    }
+  }
+}
+
+
+.tech {
+  .container {
+    position: relative;
+    padding-bottom: 224px;
+
+    .tech-title {
+      font-size: 40px;
+      font-family: Neumann, sans-serif;
+      color: rgb(236, 198, 107);
+      text-align: center;
+      padding-top: 121px;
+    }
+
+    .tech-home {
+      padding-top: 83px;
+      text-align: center;
+
+      .home-adaptive-2 {
+        display: none;
+      }
+    }
+
+    .tech-t-block {
+      max-width: 280px;
+
+      .tech-t-block-title {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(255, 255, 255);
+        padding-bottom: 16px;
+      }
+
+      .tech-t-block-description {
+        font-size: 16px;
+        font-family: Museo Sans Cyrl100, sans-serif;
+        color: rgb(255, 255, 255);
+      }
+    }
+
+    .tech-t-block.one {
+      position: absolute;
+      top: 355px;
+      left: 30px;
+    }
+
+    .tech-t-block.two {
+      position: absolute;
+      top: 605px;
+      left: 80px;
+      max-width: 230px;
+    }
+
+    .tech-t-block.three {
+      position: absolute;
+      top: 756px;
+      left: 655px;
+      max-width: 230px;
+    }
+
+    .tech-t-block.four {
+      position: absolute;
+      top: 583px;
+      left: 955px;
+      max-width: 240px;
+    }
+
+    .tech-t-block.five {
+      position: absolute;
+      top: 380px;
+      left: 963px;
+      max-width: 300px;
+    }
+  }
+
+  .arrow-block {
+    display: none;
+  }
+}
+
+.steps {
+  .steps-title {
+    font-size: 40px;
+    font-family: Neumann, sans-serif;
+    color: rgb(236, 198, 107);
+    text-align: center;
+    padding-bottom: 121px;
+  }
+
+  .steps-all {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    .steps-step {
+      display: flex;
+      max-width: 270px;
+      padding-right: 120px;
+      position: relative;
+
+      .number {
+        font-size: 70px;
+        font-family: Neumann, sans-serif;
+        color: rgb(57, 57, 67);
+        position: absolute;
+        top: -70px;
+        left: -10px;
+        z-index: -1;
+      }
+
+      .steps-step-title {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(255, 255, 255);
+        padding-bottom: 5px;
+      }
+
+      .steps-step-description {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl100, sans-serif;
+        color: rgb(255, 255, 255);
+      }
+
+      .steps-step-info {
+        padding-left: 19px;
+      }
+    }
+  }
+
+  .steps-step.one {
+    span {
+      font-weight: bold;
+      border-bottom: 1px solid white;
+    }
+  }
+
+  .steps-step.two {
+    max-width: 350px;
+    padding-bottom: 151px;
+  }
+
+  .steps-step.three {
+    padding-right: 0;
+    max-width: 300px;
+  }
+
+  .steps-step.five {
+    max-width: 350px;
+    padding-right: 120px;
+  }
+
+  .steps-step.six {
+    max-width: 270px;
+    padding-right: 30px;
+  }
+}
+
+.slider-title {
+  .container {
+    .slider-title-text {
+      font-size: 40px;
+      font-family: Neumann, sans-serif;
+      color: rgb(236, 198, 107);
+      text-align: center;
+      padding-top: 90px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.slider {
+  .container {
+    margin: 0 auto;
+
+    .slider-block {
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      width: 975px;
+      margin: auto;
+    }
+
+
+    .slick-slide:not(.slick-center) {
+      z-index: 0;
+      transform: scale(0.7);
+    }
+
+    .slick-active.slick-center + .slick-slide + .slick-slide {
+      z-index: 1;
+    }
+
+    .slick-active.slick-center + .slick-slide,
+    .slick-center + .slick-cloned {
+      z-index: 2;
+    }
+
+    .slick-center {
+      z-index: 3;
+    }
+
+    .slick-slide {
+      position: relative;
+      transition: transform 80ms;
+      max-height: 380px;
+      margin-top: 40px;
+    }
+
+    .slider__item img {
+      position: relative;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+
+    .slick-prev {
+      left: -68px;
+      z-index: 1;
+    }
+
+    .slick-next {
+      right: -68px;
+      z-index: 1;
+    }
+
+    .slick-prev.slick-arrow,
+    .slick-next.slick-arrow {
+      border: 1px solid #ecc66b;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .slick-prev:before {
+      content: url("../../images/vector3.png");;
+      color: transparent;
+    }
+
+    .slick-next:before {
+      content: url("../../images/vector4.png");;
+      color: transparent;
+    }
+
+    .slick-dots li.slick-active button:before {
+      opacity: .75;
+      color: #ecc66b;
+      content: '•';
+    }
+
+    .slick-dots li button:before {
+      font-size: 10px;
+      color: transparent;
+      content: url("../../images/transslide.png");
+    }
+
+    .slick-dots {
+      bottom: -36px;
+    }
+  }
+}
+
+.param {
+  width: 589px;
+  height: 78px;
+  background-color: #313139;
+  position: absolute;
+  /* z-index: 2; */
+  top: 302px;
+  left: -57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .param-border {
+    width: 1px;
+    height: 45px;
+    background-color: white;
+  }
+
+  .param-left {
+    display: flex;
+    flex-direction: column;
+    padding-left: 58px;
+
+    .paramHouse {
+      font-size: 18px;
+      font-family: Museo Sans Cyrl500, sans-serif;
+      color: rgb(255, 255, 255);
+    }
+
+    .paramAdress {
+      font-size: 16px;
+      font-family: Museo Sans Cyrl300, sans-serif;
+      color: rgb(255, 255, 255);
+      padding-top: 10px;
+    }
+  }
+
+  .param-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 58px;
+
+    .paramSizeBlock {
+      .paramSize {
+        font-size: 16px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(255, 255, 255);
+      }
+
+      .paramSizeN {
+        font-size: 16px;
+        font-family: Museo Sans Cyrl300, sans-serif;
+        color: rgb(255, 255, 255);
+      }
+    }
+
+    .paramAreaBlock {
+      padding-top: 10px;
+
+      .paramArea {
+        font-size: 16px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(255, 255, 255);
+      }
+
+      .paramAreaN {
+        font-size: 16px;
+        font-family: Museo Sans Cyrl300, sans-serif;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
+
+.pay {
+  .container {
+    .pay-title {
+      font-size: 40px;
+      font-family: Neumann, sans-serif;
+      color: rgb(236, 198, 107);
+      text-align: center;
+      padding-bottom: 70px;
+      padding-top: 90px;
+    }
+
+    .pay-blocks {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 60px;
+      flex-direction: row;
+
+      .pay-blocks-one {
+        width: 588px;
+        height: 139px;
+        background-color: #313139;
+
+        .pay-blocks-one-icon {
+          display: inline-block;
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+
+        .pay-blocks-one-info {
+          display: inline-block;
+          padding-top: 30px;
+
+          .pay-blocks-one-title {
+            font-size: 18px;
+            font-family: Museo Sans Cyrl500, sans-serif;
+            color: rgb(255, 255, 255);
+            padding-bottom: 15px;
+          }
+
+          .pay-blocks-one-description {
+            font-size: 18px;
+            font-family: Museo Sans Cyrl100, sans-serif;
+            color: rgb(255, 255, 255);
+            display: block;
+          }
+        }
+      }
+    }
+
+    .pay-cricles-block {
+      display: flex;
+      justify-content: space-around;
+
+      .pay-circles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .pay-circle {
+          border: 1px solid rgb(236, 198, 107);
+          height: 140px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 140px;
+          text-align: center;
+          border-radius: 100%;
+          vertical-align: top;
+        }
+      }
+
+      .pay-circles-title {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(255, 255, 255);
+        padding-top: 30px;
+      }
+
+      .pay-circles-description {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl100, sans-serif;
+        color: rgb(255, 255, 255);
+        line-height: 1.278;
+        max-width: 270px;
+        padding-top: 15px;
+      }
+    }
+
+    .pay-btn {
+      text-align: center;
+      padding-top: 60px;
+      padding-bottom: 110px;
+
+      .button {
+        border: 1px solid rgb(255, 255, 255);
+        background-color: transparent;
+        width: 382px;
+        height: 58px;
+        border-radius: 30px;
+        font-size: 18px;
+        font-family: Museo Sans Cyrl700, sans-serif;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.consultation {
+  .container {
+    .consultation-block {
+      display: flex;
+
+      .consultation-image {
+        padding-top: 10px;
+      }
+
+      .consultation-info {
+        padding-left: 76px;
+
+        .consultation-title {
+          font-size: 40px;
+          font-family: Neumann, sans-serif;
+          color: rgb(236, 198, 107);
+          text-align: center;
+          padding-bottom: 40px;
+        }
+
+        .consultation-inputs {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+
+          input {
+            border: 1px solid rgb(255, 255, 255);
+            width: 384px;
+            height: 58px;
+            border-radius: 29px;
+            background-color: transparent;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-family: Museo Sans Cyrl300, sans-serif;
+            color: rgb(255, 255, 255);
+            padding-left: 25px;
+            outline: none;
+          }
+
+          input[type=text]::placeholder {
+            font-size: 18px;
+            font-family: Museo Sans Cyrl300, sans-serif;
+            color: rgb(255, 255, 255);
+
+          }
+        }
+
+        .consultation-button {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .button {
+            background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+            background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+            background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+            width: 409px;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-family: Museo Sans Cyrl700, sans-serif;
+            color: rgb(37, 37, 45);
+            cursor: pointer;
+          }
+        }
+
+        .custom-checkbox {
+          display: none;
+        }
+
+        .checkbox-block {
+          display: flex;
+          justify-content: center;
+          padding-top: 30px;
+          position: relative;
+
+          .checkbox {
+            padding-top: 5px;
+
+            label {
+              height: 20px;
+              width: 20px;
+              border: 1px solid white;
+              display: inline-block;
+              position: relative;
+              background-color: transparent;
+            }
+
+            [type=checkbox]:checked + span:before {
+              content: url("../../images/tick.png");
+              position: absolute;
+              top: -10px;
+              left: 2px;
+              font-size: 30px;
+            }
+          }
+
+          .checkbox-text {
+            font-size: 14px;
+            font-family: Museo Sans Cyrl500, sans-serif;
+            color: rgb(255, 255, 255);
+            line-height: 1.286;
+            max-width: 330px;
+            padding-left: 27px;
+            padding-bottom: 75px;
+
+            span {
+              font-weight: bold;
+              border-bottom: 1px solid white;
+            }
+          }
+        }
+      }
+
+      .consultation-ok {
+        font-size: 40px;
+        font-family: Neumann, sans-serif;
+        color: rgb(236, 198, 107);
+        text-align: center;
+        display: none;
+        padding-left: 90px;
+        padding-top: 200px;
+        padding-bottom: 220px
+      }
+    }
+  }
+}
+
+.excursion {
+  position: relative;
+
+  .container {
+    position: relative;
+
+    .excursion-image {
+      padding-left: 20px;
+
+      img {
+        position: absolute;
+        z-index: -1;
+        right: 10px;
+      }
+    }
+
+    .excursion-image-adaptive {
+      display: none;
+    }
+
+    .excursion-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      .excursion-title {
+        font-size: 60px;
+        font-family: Neumann, sans-serif;
+        color: rgb(236, 198, 107);
+        line-height: 1.167;
+        padding-top: 210px;
+        max-width: 435px;
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      .excursion-description {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(255, 255, 255);
+        line-height: 1.278;
+        max-width: 445px;
+        text-align: center;
+        padding-bottom: 40px;
+      }
+
+      .button {
+        background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+        background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+        background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+        width: 306px;
+        height: 60px;
+        border: none;
+        font-size: 18px;
+        font-family: Museo Sans Cyrl700, sans-serif;
+        color: rgb(37, 37, 45);
+        border-radius: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.popup-excursion-block {
+  align-items: flex-end;
+  justify-content: center;
+  width: 557px;
+  height: 481px;
+  margin: 0 auto;
+  top: calc(50% - 175px);
+  right: calc(50% - 240px);
+  display: none;
+  position: fixed;
+
+  .popup-ok {
+    font-size: 40px;
+    font-family: Neumann, sans-serif;
+    color: rgb(236, 198, 107);
+    text-align: center;
+    //display: none;
+    padding-bottom: 220px;
+    z-index: 2;
+    display: none;
+  }
+}
+
+
+.popup-excursion {
+  width: 557px;
+  height: 481px;
+  background-color: #2f2f37;
+  position: absolute;
+}
+
+.popup-close {
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.popup-info {
+  z-index: 2;
+
+  .popup-title {
+    font-size: 18px;
+    font-family: Museo Sans Cyrl500, sans-serif;
+    color: rgb(255, 255, 255);
+    max-width: 400px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .popup-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    input {
+      border: 1px solid rgb(255, 255, 255);
+      width: 384px;
+      height: 58px;
+      border-radius: 29px;
+      background-color: transparent;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-family: Museo Sans Cyrl300, sans-serif;
+      color: rgb(255, 255, 255);
+      padding-left: 25px;
+      outline: none;
+    }
+
+    input[type=text]::placeholder {
+      font-size: 18px;
+      font-family: Museo Sans Cyrl300, sans-serif;
+      color: rgb(255, 255, 255);
+
+    }
+  }
+
+  .popup-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .button {
+      background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+      background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+      background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(240, 219, 188) 100%);
+      width: 409px;
+      height: 60px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      font-family: Museo Sans Cyrl700, sans-serif;
+      color: rgb(37, 37, 45);
+      cursor: pointer;
+    }
+  }
+
+  .custom-checkbox {
+    display: none;
+  }
+
+  .checkbox-block {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 20px;
+
+    .checkbox {
+      padding-top: 5px;
+
+      label {
+        height: 20px;
+        width: 20px;
+        border: 1px solid white;
+        display: inline-block;
+        position: relative;
+        background-color: transparent;
+      }
+
+      [type=checkbox]:checked + span:before {
+        content: url("../../images/tick.png");
+        position: absolute;
+        top: -10px;
+        left: 2px;
+        font-size: 30px;
+      }
+    }
+
+    .checkbox-text {
+      font-size: 14px;
+      font-family: Museo Sans Cyrl300, sans-serif;
+      color: rgb(255, 255, 255);
+      line-height: 1.286;
+      max-width: 320px;
+      padding-left: 27px;
+      padding-bottom: 55px;
+    }
+  }
+}
+
+
+.footer {
+  border-top: 1px solid #363d51;
+  margin-top: 125px;
+  padding-bottom: 100px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .phonecall {
+      display: flex;
+      align-items: center;
+      padding-top: 13px;
+
+      .call {
+        font-size: 16px;
+        font-family: Museo Sans Cyrl700, sans-serif;
+        color: rgb(236, 198, 107);
+        border-bottom: 1px solid rgb(236, 198, 107);
+        order: 2;
+        text-decoration: none;
+      }
+
+      .call:hover {
+        color: rgb(238, 183, 49);
+        border-bottom: 1px solid rgb(238, 183, 49);
+        transition: 500ms
+      }
+
+      .effectcall {
+        img {
+          display: block;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .logo {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-left: 250px;
+      padding-right: 348px;
+
+      .social {
+        padding-top: 56px;
+
+        img:hover {
+          opacity: 0.5;
+          transition: 0.5s;
+        }
+
+        a:not(:first-child) {
+          padding-left: 30px;
+        }
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .phone {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      order: 3;
+
+      .phonenumber {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl700, sans-serif;
+        color: rgb(255, 255, 255);
+        line-height: 0.833;
+      }
+    }
+
+    .adress {
+      order: 1;
+
+      .kyiv {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(255, 255, 255);
+        padding-bottom: 30px;
+      }
+
+      .time {
+        font-size: 18px;
+        font-family: Museo Sans Cyrl500, sans-serif;
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+}
+
+.popup-background {
+  background-color: black;
+  width: 100%;
+  height: 99999px;
+  opacity: 0.5;
+  position: absolute;
+  bottom: -415px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: none;
+}
+
+.error-input {
+  color: red;
+  font-size: 15px;
+  display: none;
+  position: absolute;
+}
+
+#error-input1 {
+  top: 60px;
+}
+
+#error-input2 {
+  top: 140px;
+}
+
+#error-input4 {
+  top: 192px;
+}
+
+#error-input5 {
+  top: 272px;
+}
+
+//.swiper {
+//  margin: 100px auto;
+//  width: auto;
+//  height: 240px;
+//}
+//
+//.swiper-slide {
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//  font-size: 22px;
+//  font-weight: bold;
+//  color: #fff;
+//}
+//
+//.swiper-slide:nth-child(1n) {
+//  background-color: rgb(206, 17, 17);
+//}
+//
+//.swiper-slide:nth-child(2n) {
+//  background-color: rgb(0, 140, 255);
+//}
+//
+//.swiper-slide:nth-child(3n) {
+//  background-color: rgb(10, 184, 111);
+//}
+//
+//.swiper-slide:nth-child(4n) {
+//  background-color: rgb(211, 122, 7);
+//}
+//
+//.swiper-slide:nth-child(5n) {
+//  background-color: rgb(118, 163, 12);
+//}
+//
+//.swiper-slide:nth-child(6n) {
+//  background-color: rgb(180, 10, 47);
+//}
+//
+//.swiper-slide:nth-child(7n) {
+//  background-color: rgb(35, 99, 19);
+//}
+//
+//.swiper-slide:nth-child(8n) {
+//  background-color: rgb(0, 68, 255);
+//}
+//
+//.swiper-slide:nth-child(9n) {
+//  background-color: rgb(218, 12, 218);
+//}
+//
+//.swiper-slide:nth-child(10n) {
+//  background-color: rgb(54, 94, 77);
+//}
+
